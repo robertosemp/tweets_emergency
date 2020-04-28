@@ -1,0 +1,12 @@
+name: log_reg_tweets
+
+conda_env: conda.yaml
+
+entry_points:
+  main:
+    parameters:
+      threshold: {type: float, default: 0.5}
+      lr: {type: float, default: 0.0005}
+      model: {type: string, default: "logReg"}
+    command: "python NLP_mlflow_train.py {threshold} {lr} {model}"
+    
